@@ -16,11 +16,10 @@ function App() {
           break;
         }
       }
-      // DataPizza.forEach((d)=> {if(d.name == data.name){falg=false}});
       if (falg) {
-        DataPizza.push(data)
-        // console.log();
-        setDataPizza(DataPizza);
+        const newDataPizza = [...DataPizza, data];
+        setDataPizza(newDataPizza);
+        console.log(newDataPizza);
       }
 
     }
@@ -33,8 +32,18 @@ function App() {
         {turtles.map((turtle, idx) => {
           return <Turtles turtleData={turtle} DataPizzaToAdd={handlerDataPizza} key={idx} />
         })}
-
-          <p> Length:{DataPizza.length}</p>
+        <div className='continerCardExtra'>
+          {
+            DataPizza.map(data => {
+              return (
+                <div className='cardExtra'>
+                  <h2>{data.name}</h2>
+                  <img src={data.img} width={"50px"} height={"50px"} alt="" />
+                </div>
+              )
+            })
+          }
+        </div>
         <div>
           <h2 className={DataPizza.length === 5 ? 'redText' : 'block'}>Sory Can't add more than 5 Extra</h2>
         </div>
