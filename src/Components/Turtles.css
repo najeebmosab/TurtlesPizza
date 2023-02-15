@@ -1,0 +1,38 @@
+.cardTurtle{
+    border: 1px solid #cdcdcd;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    text-align: center;
+   flex-wrap: wrap;
+
+}
+
+.cardTurtle img{
+    width: 100%;
+    
+}
+
+.divPizzaToppings{
+   text-align: start;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   
+}
+
+.divPizzaToppings button{
+    text-align: start;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .divPizzaToppings{
+        grid-template-columns: 1fr 1fr;
+    }
+  }

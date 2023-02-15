@@ -1,0 +1,29 @@
+.turtlesContainer{
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 1rem;
+  padding: 10px;
+}
+.redText{
+  color: red;
+  display: block;
+}
+.block{
+  display: none;
+}
+@media (max-width:900px) {
+  .turtlesContainer{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width:700px) {
+  .turtlesContainer{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
